@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Kāds ir Jūsu vārds?");
+        String user_name = scan.nextLine();
+        System.out.println("Sveiks, " + user_name);
+
+        System.out.println("Vai ir vēlme iegūt papildus informāciju par mūsu piedāvātajiem kursiem?");
+        String ansver = scan.nextLine();
+
+        if(ansver.contains("Jā")) {
+            System.out.println("Paldies! Mūsu uzņēmuma pārstāvis sazināsies ar Jums!");
+        } if(ansver.contains("Nē")) {
+            System.out.println("Vai ir kādi citi jautājumi mūsu uzņēmumam?");
+            String ansver_sec = scan.nextLine();
+            if(ansver_sec.contains("jā")) {
+                System.out.println("Paldies! Mūsu uzņemuma pāstāvis sazināsies ar Tevi!");
+            } else {
+                System.out.println("Paldies!");
+            }
+        }
+    }
+}
